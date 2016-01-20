@@ -7,11 +7,26 @@ ModelImporter:
   fileIDToRecycleName:
     100000: default
     100002: //RootNode
+    100004: Torus_000_Torus_002
+    100006: Torus_001
+    100008: Torus
     400000: default
     400002: //RootNode
+    400004: Torus_000_Torus_002
+    400006: Torus_001
+    400008: Torus
     2300000: default
+    2300002: Torus_000_Torus_002
+    2300004: Torus_001
+    2300006: Torus
     3300000: default
+    3300002: Torus_000_Torus_002
+    3300004: Torus_001
+    3300006: Torus
     4300000: default
+    4300002: Torus_000_Torus_002
+    4300004: Torus_001
+    4300006: Torus
   materials:
     importMaterials: 1
     materialName: 0
