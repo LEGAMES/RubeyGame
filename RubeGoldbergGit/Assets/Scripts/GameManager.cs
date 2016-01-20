@@ -20,14 +20,14 @@ public class GameManager : MonoBehaviour {
         int initialX = 0;
         int initialY = 0;
 
-        if(GUI.Button(new Rect(buttonSize, 0, buttonSize, buttonSize), "Play"))
+        if(GUI.Button(new Rect(buttonSize+500, 500, buttonSize, buttonSize), "Play"))
         {
             StartStage();
         }
 
         foreach(GameObject go in objects)
         {
-            if (GUI.Button(new Rect(initialX, initialY, buttonSize, buttonSize), go.name))
+            if (GUI.Button(new Rect(initialX+200, initialY+200, buttonSize, buttonSize), go.name))
             {
                 if (currentObject != null)
                 {
