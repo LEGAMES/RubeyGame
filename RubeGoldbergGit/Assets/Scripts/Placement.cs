@@ -3,7 +3,8 @@ using System.Collections;
 
 public class Placement : MonoBehaviour {
 
-    bool placed = false;
+	bool shiftDown = false;
+	bool placed = false;
     int yPos = 0;
 
     Color originalColor;
@@ -34,7 +35,7 @@ public class Placement : MonoBehaviour {
 
             if(Input.GetKeyDown(KeyCode.W))
             {
-                if(yPos < 8)
+                if(yPos < 1000)
                     yPos++;
             }
             if(Input.GetKeyDown(KeyCode.S))
@@ -64,7 +65,9 @@ public class Placement : MonoBehaviour {
             {
                 transform.Rotate(new Vector3(0, -90, 0));
             }
-        }
+		}
+		
+		//
 	}
 
     void OnTriggerEnter(Collider other)
@@ -78,4 +81,23 @@ public class Placement : MonoBehaviour {
         if (other.transform.tag != "Ground")
             collisions--;
     }
+
+	//Delete
+	void OnMouseOver(){
+		if (Input.GetKeyDown(KeyCode.LeftShift)) {
+			shiftDown = true;
+		}
+		else if (Input.GetKeyUp(KeyCode.LeftShift)) {
+			shiftDown = false;
+			Debug.Log("delete mode off");
+		}
+		
+		if (shiftDown) {
+			Debug.Log("delete mode");
+			if(Input.GetMouseButtonDown(0))
+			{
+				Destroy(this.gameObject);
+			}
+		}
+	}
 }

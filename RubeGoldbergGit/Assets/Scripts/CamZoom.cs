@@ -10,7 +10,7 @@ public class CamZoom : MonoBehaviour {
 	float scrollSpeed = 0.5f;
 
 	public const int minZoom = 1;
-	public const int maxZoom  = 10;
+	public const int maxZoom  = 1000;
 
 	// Use this for initialization
 	void Start () {
