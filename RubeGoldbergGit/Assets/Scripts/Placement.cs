@@ -7,11 +7,12 @@ public class Placement : MonoBehaviour {
     int yPos = 0;
 
     Color originalColor;
+	public Color otherColor;
     public int collisions = 0;
 
 	void Start () {
         originalColor = transform.GetComponent<Renderer>().material.color;
-        //transform.GetComponent<Renderer>().material.color = new Color(1, 1, 1, 0.5f);
+        transform.GetComponent<Renderer>().material.color = new Color(1, 1, 1, 0.5f);
 	}
 
     public bool Placed()
@@ -43,6 +44,8 @@ public class Placement : MonoBehaviour {
                     yPos--;
             }
 
+
+
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
@@ -51,6 +54,7 @@ public class Placement : MonoBehaviour {
                 //if (hit.transform.tag == "Ground")
                 //{
                     transform.position = new Vector3((int)hit.point.x, yPos, (int)hit.point.z);
+				//transform.GetComponent<Renderer>().material.color = otherColor;
                 //}
             }
 
